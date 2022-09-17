@@ -112,14 +112,20 @@ h6 {
 .contact-list .link {
   color: var(--secondary-text-color);
 }
+.nav-icon {
+  padding: 0;
+  fill: currentColor;
+  align-items: center;
+  margin-right: 10px;
+}
 
 .nav-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -138,7 +144,11 @@ h6 {
 /* Hero */
 
 .hero-section {
-  background-color: var(--primary-background-color);
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--primaty-white-color);
 
   text-align: center;
@@ -204,6 +214,17 @@ h6 {
   display: flex;
 }
 
+.features-container .thumb {
+  display: flex;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+}
+
 .features-container .item {
   width: calc((100% - 90px) / 4);
 }
@@ -264,8 +285,8 @@ h6 {
   background-color: var(--primaty-white-color);
 }
 
-.team-list .item + .item {
-  margin-left: 30px;
+.team-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-image {
@@ -284,10 +305,33 @@ h6 {
 }
 
 .team-position {
+  margin: 0;
   color: var(--secondary-text-color);
 
   font-size: 16px;
   line-height: 1.2;
+}
+.social-list {
+  display: flex;
+  margin: 16px 32px 30px 32px;
+}
+.social-list .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link.icon {
+  fill: var(--secondary-text-color);
+}
+.social-link:hover {
+  background-color: var(--accent-color);
 }
 
 /* Footer */
