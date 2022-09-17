@@ -5,6 +5,7 @@
   --accent-color: #2196f3;
   --primary-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 
 /* * {
@@ -280,8 +281,10 @@ h6 {
   text-align: center;
 }
 
-.team-list .item {
+.team-list > .item {
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primaty-white-color);
 }
 
@@ -327,11 +330,38 @@ h6 {
   height: 44px;
   border-radius: 50%;
 }
-.social-link.icon {
-  fill: var(--secondary-text-color);
+.social-link .icon {
+  fill: var(--icon-color);
 }
 .social-link:hover {
   background-color: var(--accent-color);
+}
+
+.social-link:hover .icon {
+  fill: var(--primaty-white-color);
+}
+
+/* Clients */
+
+.clients .list {
+  display: flex;
+}
+.clients .item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients .link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients .icon {
+  fill: var(--icon-color);
 }
 
 /* Footer */
